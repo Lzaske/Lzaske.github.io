@@ -264,6 +264,8 @@ douban:
   id: 257222499
   builtin: false
   item_per_page: 10
+  meta_max_line: 4
+  customize_layout: page
   book:
     path: books/index.html
     title: '知个人修身之要'
@@ -284,6 +286,6 @@ douban:
   #   title: '避难所'
   #   quote: '音乐是人类灵魂的避难所。'
   #   option:
-  timeout: 100000
+  timeout: 10000
 
 

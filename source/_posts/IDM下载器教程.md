@@ -7,7 +7,7 @@ tags:
   - 软件推荐
 abbrlink: 28364
 date: 2023-04-10 20:14:28
-cover:
+cover: https://lzaske-tuchuang.oss-cn-beijing.aliyuncs.com/Blog/202310222040717.jpg
 password:
 summary:
 categories:
