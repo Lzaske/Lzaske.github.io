@@ -7,10 +7,10 @@ menu:
   时间轴: /archives/ || fas fa-archive
   # 标签: /tags/ || fas fa-tags
   # 分类: /categories/ || fas fa-folder-open
-  清单||fas fa-list || hide :
+  清单||fas fa-list hide :
    # 音乐: /music/ || fas fa-music
-   电影: /movies/ || fas fa-video
-   书籍: /books/ || fas fa-book
+   - 电影 || /movies/ || fas fa-video
+   - 书籍 || /books/ || fas fa-book
   # 友链: /link/ || fas fa-link
   关于: /about/ || fas fa-heart
 
@@ -276,7 +276,7 @@ comments:
   # Up to two comments system, the first will be shown as default
   # Choose: Disqus/Disqusjs/Livere/Gitalk/Valine/Waline/Utterances/Facebook Comments/Twikoo/Giscus/Remark42/Artalk
   use:  # Valine,Disqus
-      - Twikoo
+      - Valine
   text: true # Display the comment name next to the button
   # lazyload: The comment system will be load when comment element enters the browser's viewport.
   # If you set it to true, the comment count will be invalid
@@ -316,13 +316,21 @@ gitalk:
 # valine
 # https://valine.js.org
 valine:
-  appId: # leancloud application app id
-  appKey: # leancloud application app key
+  enable: true # if you want use valine,please set this value is true
+  appId: U1ZQhvXt6WTOQFqHfToOLAre-gzGzoHsz # leancloud application app id
+  appKey: HTDE6e0pYTGtbkts7XXnOGIq # leancloud application app key
+  pageSize: 10 # comment list page size
   avatar: monsterid # gravatar style https://valine.js.org/#/avatar
+  lang: zh-CN # i18n: zh-CN/zh-TW/en/ja
+  placeholder: Please leave your footprints # valine comment input placeholder(like: Please leave your footprints )
+  guest_info: nick,mail,link #valine comment header info (nick/mail/link)
+  recordIP: false # Record reviewer IP
   serverURLs: # This configuration is suitable for domestic custom domain name users, overseas version will be automatically detected (no need to manually fill in)
-  bg: # valine background
-  visitor: false
-  option:
+  bg: # valine background    //现版本已经把背景改成透明了，想要背景可自行更改，或者参考我的脚手架
+  emojiCDN: # emoji CDN      //表情自定义，可查看主题官方文档配置
+  enableQQ: false # enable the Nickname box to automatically get QQ Nickname and QQ Avatar
+  requiredFields: nick,mail # required fields (nick/mail)
+  count: false # dispaly comment count in top_img
 
 # waline - A simple comment system with backend support fork from Valine
 # https://waline.js.org/
@@ -575,7 +583,7 @@ activate_power_mode:
 
 # Mouse click effects: fireworks (鼠標點擊效果: 煙火特效)
 fireworks:
-  enable: false
+  enable: true
   zIndex: 9999 # -1 or 9999
   mobile: false
 
@@ -717,7 +725,7 @@ busuanzi:
 # Time difference between publish date and now (網頁運行時間)
 # Formal: Month/Day/Year Time or Year/Month/Day Time
 runtimeshow:
-  enable: false
+  enable: true
   publish_date: # 2023/02/13 00:00:00
 
 # Aside widget - Newest Comments

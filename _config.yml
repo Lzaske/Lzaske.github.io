@@ -194,7 +194,7 @@ wowjs:
 # 页脚徽标：[Add Github Badge](https://akilar.top/posts/e87ad7f8/)
 footer_beautify:
   enable:
-    timer: false # 计时器开关
+    timer: true # 计时器开关
     bdage: true # 徽标开关
   priority: 5 #过滤器优先权
   enable_page: all # 应用页面
@@ -288,4 +288,52 @@ douban:
   #   option:
   timeout: 10000
 
+#启用all_minifier
+all_minifier: true
+# html压缩
+html_minifier:
+  enable: true
+  ignore_error: false
+  exclude:
 
+# css压缩
+css_minifier:
+  enable: true
+  exclude:
+    - '*.min.css'
+    
+# js压缩
+js_minifier:
+  enable: true
+  mangle: true
+  compress:
+  exclude:
+    - '*.min.js'
+js_concator:
+  enable: false
+  bundle_path: '/js/bundle.js'
+  front: false
+  silent: false
+
+# 图片优化
+image_minifier:
+  enable: true
+  interlaced: false
+  multipass: false
+  optimizationLevel: 2
+  pngquant: false
+  progressive: false
+
+  autobackup:
+    enable: true
+    # 包含rclone.exe的文件夹的路径
+    rclonepath: F:\Download\Compressed\rclone-v1.66.0-windows-amd64
+    # 每次hexo-auto-backup运行时，将会删除超过预定义时间限制的备份。时间单位为天。
+    expire: 30
+    type:
+        - local > F:\Hexo\blog-backup
+        # - google drive > \blog-backup
+    # 你可以加入多个type，每个type使用 ">" 分隔参数。
+    # "local" 始终指的是本地磁盘或 USB 设备。
+    # 第一个参数是在 rclone 中配置的远程名称，代表一个服务，
+    # 而第二个参数是目标路径
